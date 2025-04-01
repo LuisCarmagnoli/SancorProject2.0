@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Póliza</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-buttons">
+            <button onclick="window.location.href='home.html'" class="nav-button">Inicio</button>
+            <button onclick="window.location.href='create-policy.html'" class="nav-button">Crear Póliza</button>
+            <button onclick="window.location.href='get-policy.html'" class="nav-button">Obtener Póliza</button>
+            <button onclick="window.location.href='get-all-policies.html'" class="nav-button">Obtener Todas las Pólizas</button>
+            <button onclick="window.location.href='update-policy.html'" class="nav-button">Actualizar Póliza</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="container">
+            <h2>Actualizar Póliza</h2>
+            <form id="updateForm">
+                <label for="policyId">ID de Póliza:</label>
+                <input type="number" id="policyId" name="policyId" placeholder="Ingrese el ID de la póliza" required min="1">
+                
+                <label for="ramo">Ramo:</label>
+                <select id="ramo" name="ramo">
+                    <option value="203">Automotores</option>
+                    <option value="700">Robo</option>
+                </select>
+            
+                <label for="productId">Producto:</label>
+                <select id="productId" name="productId">
+                    <option value="4">Operatoria normal</option>
+                    <option value="44">Robo de equipos electrónicos</option>
+                    <option value="85">Artículos y Vivienda</option>
+                </select>
+            
+                <label for="clientId">ID de Cliente:</label>
+                <input type="number" id="clientId" name="clientId" placeholder="Ingrese el ID del cliente" required min="1">
+            
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" placeholder="Ingrese la descripción"></textarea>
+            
+                <button type="submit">Actualizar</button>
+            </form>
+            <div id="updateResult" class="results-container">
+                <!-- El resultado de la actualización se mostrará aquí -->
+            </div>
+        </div>
+    </div>
+    <script src="../Methods/update-policy.js"></script>
+</body>
+</html>

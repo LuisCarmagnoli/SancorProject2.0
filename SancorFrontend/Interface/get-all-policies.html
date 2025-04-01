@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Todas las Pólizas</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-buttons">
+            <button onclick="window.location.href='home.html'" class="nav-button">Inicio</button>
+            <button onclick="window.location.href='create-policy.html'" class="nav-button">Crear Póliza</button>
+            <button onclick="window.location.href='get-policy.html'" class="nav-button">Obtener Póliza</button>
+            <button onclick="window.location.href='get-all-policies.html'" class="nav-button">Obtener Todas las Pólizas</button>
+            <button onclick="window.location.href='update-policy.html'" class="nav-button">Actualizar Póliza</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="container">
+            <h2>Lista de Todas las Pólizas</h2>
+            <div id="results" class="results-container">
+                <!-- Los resultados se mostrarán aquí -->
+            </div>
+        </div>
+    </div>
+    <script src="../Methods/get-all-policies.js"></script>
+</body>
+</html>

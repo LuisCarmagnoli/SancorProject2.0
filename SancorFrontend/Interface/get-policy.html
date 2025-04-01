@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Póliza</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-buttons">
+            <button onclick="window.location.href='home.html'" class="nav-button">Inicio</button>
+            <button onclick="window.location.href='create-policy.html'" class="nav-button">Crear Póliza</button>
+            <button onclick="window.location.href='get-policy.html'" class="nav-button">Obtener Póliza</button>
+            <button onclick="window.location.href='get-all-policies.html'" class="nav-button">Obtener Todas las Pólizas</button>
+            <button onclick="window.location.href='update-policy.html'" class="nav-button">Actualizar Póliza</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="container">
+            <form id="searchForm">
+                <h2>Buscar Póliza</h2>
+                
+                <div class="search-input">
+                    <input type="number" 
+                           id="policyId" 
+                           name="policyId" 
+                           placeholder="Ingrese el ID de la póliza" 
+                           required 
+                           min="1">
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+
+            <div id="results" class="results-container">
+                <!-- Los resultados se mostrarán aquí -->
+            </div>
+        </div>
+    </div>
+    <script src="../Methods/get-policy.js"></script>
+</body>
+</html>

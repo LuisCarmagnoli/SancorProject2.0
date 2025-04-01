@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Póliza</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-buttons">
+            <button onclick="window.location.href='home.html'" class="nav-button">Inicio</button>
+            <button onclick="window.location.href='create-policy.html'" class="nav-button">Crear Póliza</button>
+            <button onclick="window.location.href='get-policy.html'" class="nav-button">Obtener Póliza</button>
+            <button onclick="window.location.href='get-all-policies.html'" class="nav-button">Obtener Todas las Pólizas</button>
+            <button onclick="window.location.href='update-policy.html'" class="nav-button">Actualizar Póliza</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <form id="myForm">
+            <h2>Crear Póliza</h2>
+            <label for="ramo">Ramo:</label>
+            <select id="ramo" name="ramo" onchange="toggleProduct()">
+                <option value="">Selecciona una opción</option>
+                <option value="Automotores">Automotores</option>
+                <option value="Robo">Robo</option>
+            </select>
+
+            <label for="product">Producto:</label>
+            <select id="product" name="product" disabled>
+                <option value="">Seleccione el ramo primero</option>
+            </select>
+
+            <label for="nombre">Nombre del Asegurado:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="intermediario">Intermediario:</label>
+            <input type="text" id="intermediario" name="intermediario" placeholder="Nombre del intermediario" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="../Methods/create-policy.js" defer></script>
+</body>
+</html>
